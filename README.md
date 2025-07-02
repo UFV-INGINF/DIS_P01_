@@ -15,6 +15,8 @@ Familiarizarse con los comandos básicos de Git trabajando desde el terminal:
 
 2. Clona tu repositorio en local con Visual Studio Code:
 
+![clonar con Code](img/imagen1_repo.png)
+
 ```bash
 git clone https://github.com/ufv-dis-2025/p1-git-basico-TUUSUARIO.git
 cd p1-git-basico-TUUSUARIO
