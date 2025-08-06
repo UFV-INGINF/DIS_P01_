@@ -5,8 +5,13 @@ import os
 def run_cmd(cmd):
     return subprocess.run(cmd, shell=True, text=True, capture_output=True)
 
-# Usuario de GitHub (lo podemos obtener de una variable de entorno en Actions)
-github_user = os.getenv("GITHUB_ACTOR", "desconocido")
+# Obtener usuario a partir del nombre del repositorio
+# Ej: UFV-INGINF/DIS_P01_Fraxito2 -> Fraxito2
+repo_name = os.getenv("GITHUB_REPOSITORY", "")
+if repo_name:
+    github_user = repo_name.split("/")[-1].replace("DIS_P01_", "")
+else:
+    github_user = "desconocido"
 
 nota = 10
 comentarios = []
@@ -15,7 +20,7 @@ comentarios = []
 commits = run_cmd("git log --oneline").stdout.strip().split("\n")
 if len(commits) == 0 or commits == ['']:
     nota = 0
-    comentarios.append("No hay commits")
+    comentarios.append("No hay commits en GitHub (¿has hecho git push?)")
 else:
     # 2. Comprobar mensaje distinto a 'Initial commit'
     mensajes = [c for c in commits if "Initial commit" not in c]
