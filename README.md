@@ -35,14 +35,14 @@ cd p1-git-basico-TUUSUARIO
 
 ```bash
 git status
-git add tarea/mi_historia.txt
+git add .
 git commit -m "Primera versión de mi historia personal"
 ```
 
 6. Vuelve a editar el archivo para añadir una segunda anécdota. Luego haz otro commit:
 
 ```bash
-git add tarea/mi_historia.txt
+git add .
 git commit -m "Añadida segunda anécdota"
 ```
 
@@ -50,4 +50,13 @@ git commit -m "Añadida segunda anécdota"
 
 ## ✅ Entrega
 
-Con que hagas `git commit`, la entrega queda registrada automáticamente. El profesor evaluará tu historial de commits directamente en GitHub.
+⚠️ **IMPORTANTE:** Hacer `git commit` solo guarda los cambios en tu ordenador.  
+Para que podamos recibir tu trabajo y lo podamos evaluar, **debes subirlo a GitHub** con `git push`: (fíjate bien si tu rama principal se llama main o se llama master)
+
+```bash
+git push origin main
+```
+o si tu rama principal se llama master:
+```bash
+git push origin master
+```
