@@ -50,4 +50,4 @@ git commit -m "Añadida segunda anécdota"
 
 ## ✅ Entrega
 
-Con que hagas `git commit`, la entrega queda registrada automáticamente. El profesorado evaluará tu historial de commits directamente en GitHub.
+Con que hagas `git commit`, la entrega queda registrada automáticamente. El profesor evaluará tu historial de commits directamente en GitHub.
